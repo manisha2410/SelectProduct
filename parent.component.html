@@ -1,0 +1,56 @@
+<div  class="page-area">
+  <div class="text-center">
+    <h2>Buy Product</h2>
+  </div>
+  <div class="alert alert-light  border d-flex  align-items-center" *ngIf="addedproduct" >
+   <strong class="text-success">{{addedproduct}}</strong> &nbsp;  is Selected and Added In  Cart
+   <button class="btn btn-success mx-auto">Checkout</button>
+  </div>
+  <hr class="mb-3">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <table>
+          <tr><td>
+            <img src="../../../assets/images/laptop1.png"  width="10px" height="300px" alt="laptop" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title">Laptop</h5>
+              <a  class="btn btn-success" (click)="onSelect('Laptop')">Select This Product</a>
+            </div>
+          </td>
+          <td>
+            <img src="../../../assets/images/whashingmachine.jpg"  width="10px" height="300px"  alt="laptop" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title">Washing Machine</h5>
+              <a  class="btn btn-success" (click)="onSelect('Washing Machine')">Select This Product</a>
+            </div>
+          </td>
+          <td>
+            <img src="../../../assets/images/mobile.jpg"  width="10px"  height="300px"  alt="laptop" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title">Mobile</h5>
+              <a  class="btn btn-success" (click)="onSelect('Mobile')">Select This Product</a>
+            </div>
+          </td>
+          <td>
+            <img src="../../../assets/images/tv.jpg"  width="10px" height="300px" alt="laptop" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title">TV</h5>
+              <a  class="btn btn-success" (click)="onSelect('TV')">Select This Product</a>
+            </div>
+          </td>
+          </tr>
+
+
+
+          </table>
+            </div>
+          </div>
+          <div class="col-md-12 bg-success text-center text-white py-4">
+           <h2  *ngIf="!productSelected">Please  Select Any Item</h2>
+           <h2   *ngIf="productSelected">{{selectedProduct}} is Selected</h2>
+           <button class="btn" (click)="onaddproduct()">Add To Cart</button>
+          </div>
+        </div>
+        </div>
+
